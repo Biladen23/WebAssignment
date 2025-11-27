@@ -3,53 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilal Habeshan Kitchen  - Contact</title>
+    <title>Bilal Ethiopian Kitchen - Contact</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
     <header>
         <nav>
-            <h1>Bilal Habeshan Kitchen </h1>
+            <h1>Bilal Ethiopian Kitchen</h1>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="location.html">Location</a></li>
             </ul>
         </nav>
     </header>
-
     <section class="content-section" id="contact-page">
-        <h2>Location & Contact</h2>
-        
+        <h2>Contact Us</h2>
+
         <div class="contact-flex">
             <div class="contact-info">
-                <h3>Get In Touch</h3>
-                <p><strong>Address:</strong>Arid Street, Mekelle, Tigray 90210</p>
-                <p><strong>Phone:(+251) 900-000-000</strong></p>
-                <p><strong>Email:</strong> info@bilalhabeshankitchen
-.com</p>
+                <h3>Contact</h3>
+                <p>If you'd like to work together, send a short message:</p>
 
-                <h3>Opening Hours</h3>
-                <p>Mon - Fri: 12:00 AM - 3:00 PM</p>
-                <p>Sat - Sun: 12:00 AM - 5:00 PM</p>
+                <form id="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone (optional)</label>
+                        <input id="phone" name="phone" type="tel" placeholder="(+251) 9xx-xxx-xxx">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="button">Send Message</button>
+                </form>
             </div>
 
-            <div class="map-area">
+            <!-- <div class="map-area">
                 <h3>Find Us Here</h3>
-                
-
-[Image of a static map showing the location]
-
-            </div>
+                <img src="images/map-placeholder.png" alt="Location Map">
+            </div> -->
         </div>
     </section>
 
     <footer>
-        <p>Arid Street,Mekelle,Tigray | (+251) 900-000-000</p>
-        <p>&copy; 2025 Bilal Habeshan Kitchen. All Rights Reserved.</p>
+        <p>Arid Street, Mekelle, Tigray | (+251) 900-0000-00</p>
+        <p>&copy; 2025 Bilal Habeshan food. All Rights Reserved.</p>
     </footer>
 
 </body>
