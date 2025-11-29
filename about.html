@@ -22,21 +22,67 @@
         </nav>
     </header>
 
-    <section class="content-section" id="about-page">
-        <h2>Our Story & Philosophy</h2>
-        <div class="about-grid">
-            <div class="about-photo">
-                <!-- Add owner photo at ./images/owner.jpg (replace with real photo) -->
-                <img src="./images/owner.jpg" alt="Bilal Ahmed, owner of Bilal Ethiopian Kitchen">
-            </div>
+    <section class="about container" id="about">
+  <div class="about-grid">
+    <div class="about-image">
+      <img src="./images/about.jpg" alt="Chef preparing traditional Ethiopian dish" loading="lazy" onerror="this.src='./images/placeholder.jpg'">
+    </div>
+    <div class="about-text">
+      <h3>Our Story</h3>
+      <p>Bilal Habeshan Kitchen celebrates the vibrant food and hospitality of the Habesha tradition. We combine authentic recipes passed down through generations with fresh, locally sourced ingredients to create dishes full of spice, warmth, and heart.</p>
+      <ul class="features">
+        <li><strong>Handmade Injera</strong> — traditional teff sourdough.</li>
+        <li><strong>Signature Stews</strong> — Doro Wat, Misir Wot, and Shiro.</li>
+        <li><strong>Coffee Ceremony</strong> — experience Bunna the traditional way.</li>
+      </ul>
+      <a href="about.html" class="btn btn-outline">Read More</a>
+    </div>
+  </div>
+</section>
 
-            <div class="about-text">
-                <p>Bilal Ethiopian Kitchen celebrates the flavors and hospitality of Ethiopia. Founded by <strong>Bilal Ahmed</strong>, the restaurant shares family recipes and the tradition of communal eating centered around injera and richly spiced stews.</p>
+<!-- MENU HIGHLIGHTS -->
+<section class="highlights container" aria-label="Menu highlights">
+  <h3>Menu Highlights</h3>
+  <p class="sub">A selection of our most-loved dishes</p>
 
-                <p>Bilal grew up watching coffee ceremonies and home-cooked meals that brought family and friends together. Our goal is to bring that same warmth, authenticity, and high-quality ingredients to every plate and cup.</p>
-            </div>
+  <div class="cards-grid">
+    <article class="card">
+      <img src="./images/doro-wat.jpg" alt="Doro Wat" loading="lazy" onerror="this.src='./images/placeholder.jpg'">
+      <div class="card-body">
+        <h4>Doro Wat</h4>
+        <p>Slow-cooked chicken in rich berbere sauce — spicy, tender, and deeply flavorful.</p>
+        <div class="card-meta">
+          <span class="price">2499.99 Birr</span>
+          <a href="menu.html" class="btn btn-small">Order</a>
         </div>
-    </section>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/tibs.jpg" alt="Tibs" loading="lazy" onerror="this.src='./images/placeholder.jpg'">
+      <div class="card-body">
+        <h4>Tibs</h4>
+        <p>Sautéed meat with peppers and onions — a hearty favorite for gatherings.</p>
+        <div class="card-meta">
+          <span class="price">599.99 Birr</span>
+          <a href="menu.html" class="btn btn-small">Order</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="./images/kitfo.jpg" alt="Kitfo" loading="lazy" onerror="this.src='./images/placeholder.jpg'">
+      <div class="card-body">
+        <h4>Kitfo</h4>
+        <p>Seasoned minced beef served traditionally with mitmita and butter.</p>
+        <div class="card-meta">
+          <span class="price">1499.99 Birr</span>
+          <a href="menu.html" class="btn btn-small">Order</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
     <footer>
         <p>Arid Street, Mekelle, Tigray | (555) 123-4567</p>
