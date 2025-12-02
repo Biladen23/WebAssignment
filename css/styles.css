@@ -32,9 +32,14 @@ nav {
 }
 
 nav h1 {
-    margin: 0;
-    font-size: 1.5em;
+    /* Use a different font (if imported) for the name */
+    font-family: 'Merriweather', serif; 
+    font-size: 1.8em; /* Slightly larger */
+    font-weight: 700;
+    letter-spacing: 1px; /* Spacing makes it look more premium */
+    margin-right: 30px; /* Ensures space between name and menu */
 }
+
 
 nav ul {
     list-style: none;
