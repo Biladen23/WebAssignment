@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilal Habeshan Kitchen- Home</title> 
- <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Bilal Ethiopian Kitchen - Home</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
     <header>
-          <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h2>Welcome to Bilal Habeshan Kitchen</h2>
-          <p>Warm, authentic Habesha dishes — served with tradition. Try our Doro Wat, Tibs and the classic Buna coffee ceremony.</p>
-          <div class="hero-ctas">
-            <a href="menu.html" class="btn btn-primary">View Menu</a>
-            <a href="#booking" class="btn btn-ghost">Book a Table</a>
-          </div>
+        <nav>
+            <h1>Bilal Ethiopian Kitchen</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero hero-left">
+        <div class="hero-bg">
+            <img src="./images/herosectionimageop4.jpg" alt="Hero image">
         </div>
-        <figure class="hero-image">
-          <img src="./images/hero.jpg" alt="Large platter of injera and traditional dishes" loading="lazy" onerror="this.src='./images/placeholder.jpg'">
-        </figure>
-      </div>
-    
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <h1>Bilal Ethiopian Kitchen</h1>
+                <p class="tagline">Authentic Ethiopian flavors served with warmth — injera, stews, and ceremonial coffee.</p>
+                <div class="hero-ctas">
+                    <a href="menu.html" class="button primary">View Menu</a>
+                    <a href="#picks" class="button ghost">Top Picks</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="picks" class="content-section">
@@ -37,21 +45,45 @@
             <div class="pick-item">
                 <h3>Doro Wat Platter</h3>
                 <p>Our signature spicy chicken stew served with injera and a side of mitmita-spiced vegetables.</p>
+                <img src="./images/dorowot1.png" alt="">
             </div>
             <div class="pick-item">
                 <h3>Vegetarian Injera Platter</h3>
                 <p>Assorted vegetarian stews: misir wot, shiro, gomen, and atkilt served on fresh injera.</p>
+                <img src="./images/salad.jpg" alt="">
             </div>
             <div class="pick-item">
                 <h3>Ethiopian Bunna (Coffee)</h3>
-                <p>Traditional Ethiopian coffee brewed fresh — a rich, aromatic cup to finish your meal.</p>
+                <p>Traditional Ethiopian coffee brewed fresh <br> a rich, aromatic cup to finish your meal.</p>
+                <img src="./images/coffee_ceremony.png" alt="">
+            </div>
+            <div class="pick-item">
+                <h3>Beyanetu</h3>
+                <p>A plate with all the goods of the restuarant, <br> from the very delicious doro wot, to our in house shiro, with a side tibs.</p>
+                <img src="./images/beyaynetu.webp" alt="">
             </div>
         </div>
     </section>
 
     <footer>
-        <p>Arid Street ,Mekelle ,Tigray | (+251) 900-000-000-</p>
-        <p>&copy; 2025 Bilal Habeshan Kitchen . All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-item">
+                <!-- location icon -->
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+                <span>Arid Street, Mekelle, Ethiopia</span>
+            </div>
+            <div class="footer-item">
+                <!-- phone icon -->
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 01.94-.27c1.02.26 2.12.4 3.25.4a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.13.14 2.23.4 3.25a1 1 0 01-.27.94l-2.01 2.6z"/></svg>
+                <span>(+251) 91 000 0000</span>
+            </div>
+            <div class="footer-item">
+                <!-- email icon -->
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>info@bilalhabeshanfoods.com</span>
+            </div>
+        </div>
+        <p>&copy; 2025 Bilal Ethiopian Kitchen. All Rights Reserved.</p>
     </footer>
 
 </body>
