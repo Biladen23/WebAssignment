@@ -398,11 +398,18 @@ nav ul li a:hover {
 }
 
 .about-text {
-    flex: 1 1 0;
-    max-width: 680px;
-    text-align: left;
+    padding: 0 10px;
 }
 
+/* Style the paragraphs for better reading experience */
+.about-text p {
+    font-family: 'Open Sans', sans-serif; 
+    text-align: left; /* Crucial: Align left for long text */
+    line-height: 1.8; /* Increases space between lines (high readability) */
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 25px;
+}
 @media (max-width: 800px) {
     .about-grid {
         flex-direction: column;
