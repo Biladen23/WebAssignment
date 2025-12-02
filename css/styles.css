@@ -52,7 +52,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #795548; /* Lighter Brown */
+    /* Use a contrasting color for a modern feel */
+    color: #FFC107; /* Bright Gold/Spice Yellow */
+    border-bottom: 3px solid #FFC107;
+    background-color: transparent; /* Remove background change for cleaner look */
 }
 
 /* --- 3. General Content & Headings --- */
