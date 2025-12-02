@@ -22,9 +22,9 @@ header {
     padding: 10px 0;
     position: sticky;
     top: 0;
-    z-index: 100;
-    /* Add a subtle shadow to lift the bar off the page when scrolling */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    z-index: 1000; /* Ensure it's always on top */
+    /* Final Box Shadow for depth and separation from content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
 }
 
 
