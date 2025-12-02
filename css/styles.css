@@ -68,53 +68,148 @@ h2 {
 
 /* Hero Section */
 .hero {
-    background-color: #BCAAA4; /* Muted Beige background */
-    color: #5C3D2E;
-    height: 70vh;
+    position: relative;
+    min-height: 80vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    color: #fff;
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('../images/herosectioninspo.webp');
     background-size: cover;
     background-position: center;
+    overflow: hidden; /* ensure absolutely positioned images don't overflow the section */
 }
 
-.hero-content {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+/* .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 100%);
+    pointer-events: none;
+    z-index: 1; sits above the image but below the content
+ */
+
+/* Background image wrapper for pasted images — they fill the hero but stay contained */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.hero h2 {
-    font-size: 3.5em;
-    margin-top: 0;
-    margin-bottom: 10px;
+.hero-bg img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* covers the hero area without distortion */
+    display:block;
+    z-index: initial;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.hero-text {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.hero-text h1 {
+    font-size: 3.6rem;
+    line-height: 1.02;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.02em;
+}
+
+.hero-text .tagline {
+    font-size: 1.25rem;
+    margin: 0 0 28px 0;
+    color: rgba(255,255,255,0.95);
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .button {
     display: inline-block;
-    background-color: #5C3D2E;
-    color: white;
     text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
-.button:hover {
-    background-color: #795548;
+.button.primary {
+    background: #E27B3F;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(226,123,63,0.18);
+}
+
+.button.primary:hover { transform: translateY(-3px); }
+
+.button.ghost {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+.button.ghost:hover { transform: translateY(-3px); }
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: 60vh;
+        background-position: center 35%;
+    }
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    .hero-text .tagline {
+        font-size: 1rem;
+    }
+}
+
+/* Left-aligned variant to match the reference image: left on desktop, centered on mobile */
+.hero.hero-left .hero-inner {
+    display: flex;
+    justify-content: center; /* default center for small screens */
+}
+
+@media (min-width: 801px) {
+    .hero.hero-left .hero-inner {
+        justify-content: flex-start; /* push content to left */
+        padding-left: 6%;
+    }
+    .hero.hero-left .hero-text {
+        text-align: left;
+        max-width: 560px;
+        margin: 0;
+        transform: translateY(6vh); /* slightly lower for the 'lower third' feel */
+    }
+}
+
+/* Keep mobile centered and remove transform */
+@media (max-width: 800px) {
+    .hero.hero-left .hero-text {
+        text-align: center;
+        transform: none;
+        padding: 0 16px;
+    }
 }
 
 /* Top Picks Section */
 #picks {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 .picks-grid {
@@ -130,30 +225,57 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
+.pick-item p{
+    color: white;
+    text-align: left;
+    font-size: small;
+    margin-top: 0px;
+}
 
 .pick-item h3 {
-    color: #5C3D2E;
+    color: rgb(219, 153, 11);
     font-size: 1.5em;
     margin-top: 0;
 }
 
 /* Placeholder Styling for Images in Top Picks */
-.pick-item ,
-.pick-item 
+.pick-item {
+    /* cards contain an image which will be layered beneath the text */
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
 
-/* [Image of a plate of delicious food] */
- {
-    display: block;
+/* Put the item image as a full-bleed background layer under the text */
+.pick-item img {
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
     width: 100%;
-    height: 150px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 0;
+    border-radius: inherit;
+    filter: brightness(0.78); /* slightly darken so text remains legible */
+}
+
+/* Ensure the textual content sits above the image */
+.pick-item > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Optional: if you want a subtle tile fallback color when image isn't present */
+.pick-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     background-color: #EFEBE9;
-    margin: 15px 0;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #795548;
-    font-style: italic;
+    z-index: 0;
+    border-radius: inherit;
 }
 
 /* --- 5. Menu Page Styles (menu.html) --- */
@@ -450,21 +572,79 @@ footer p {
     margin: 5px 0;
 }
 
+/* Footer contact layout */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 0.95em;
+}
+
+.footer-item .icon {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        gap: 14px;
+        padding: 0 16px;
+    }
+    .footer-item span { font-size: 0.95em; }
+}
+
 /* --- 10. Responsive Adjustments --- */
 @media (max-width: 800px) {
-    /* Navigation Stack */
+    /* Keep navigation horizontal on small screens: allow horizontal scroll */
     nav {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 12px;
+    }
+    nav h1 {
+        font-size: 1.2rem;
     }
     nav ul {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        margin-top: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* hide Firefox scrollbar */
+        flex: 1 1 auto; /* allow the list to take remaining space and shrink */
+        min-width: 0; /* allow flex children to shrink instead of overflowing */
+        padding-right: 22px; /* leave room for vertical scrollbar so rightmost items aren't covered */
+        scrollbar-gutter: stable both-edges; /* reserve space for scrollbars to avoid overlaying content */
     }
+    nav h1 { flex: 0 0 auto; }
+    nav ul li { flex: 0 0 auto; }
+    /* shrink link typography and padding progressively so items stay visible */
+    nav ul li a {
+        font-size: clamp(0.85rem, 1.2vw, 1rem);
+        padding: 8px 10px;
+    }
+    nav ul { gap: 6px; }
+    nav ul::-webkit-scrollbar { display: none; } /* hide WebKit scrollbar */
+    nav ul li { white-space: nowrap; }
     nav ul li a {
         text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: none;
+        padding: 10px 12px;
     }
+
     .hero h2 {
         font-size: 2.5em;
     }
@@ -501,5 +681,57 @@ footer p {
 @media (max-width: 800px) {
     .map-area {
         height: 300px; /* slightly smaller on small screens */
+    }
+}
+
+/* Tighter adjustments for very small phones */
+@media (max-width: 420px) {
+    nav h1 { font-size: 1rem; }
+    nav ul li a {
+        font-size: 0.75rem;
+        padding: 6px 8px;
+    }
+    nav ul { gap: 6px; }
+}
+
+/* If still too crowded on extremely narrow screens reduce gap further */
+@media (max-width: 340px) {
+    nav ul li a {
+         font-size: 0.72rem;
+         padding: 5px 6px; 
+    }
+    nav h1 {
+         font-size: 0.95rem; }
+}
+
+/* Small screens: stack nav so links remain visible instead of getting hidden */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        padding: 8px 12px;
+    }
+    nav h1 {
+        text-align: center;
+        font-size: 1.05rem;
+        margin: 0;
+        padding: 4px 0;
+    }
+    nav ul {
+        display: flex;
+        flex-wrap: wrap; /* allow links to wrap to next line instead of being clipped */
+        justify-content: center;
+        overflow-x: visible; /* allow the full list to be shown/wrapped */
+        -webkit-overflow-scrolling: auto;
+        gap: 6px;
+        padding: 0;
+        margin: 0;
+    }
+    nav ul li {
+         flex: 0 0 auto; 
+    }
+    nav ul li a {
+         padding: 8px 10px; 
     }
 }
