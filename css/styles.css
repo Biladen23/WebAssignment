@@ -9,7 +9,7 @@ body {
 
 /* --- 2. Navigation Bar (Used on ALL Pages) --- */
 header {
-    background-color: rgb(197,129,94);
+    background-color: #5C3D2E; /* Dark Brown */ ;
     color: white;
     padding: 10px 0;
     position: sticky;
