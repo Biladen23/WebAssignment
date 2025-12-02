@@ -378,7 +378,13 @@ nav ul li a:hover {
 }
 
 .about-photo {
-    flex: 0 0 260px; /* fixed photo column */
+    margin: 20px auto; 
+    width: 200px; /* Fixed size for a perfect circle */
+    height: 200px;
+    overflow: hidden; 
+    border-radius: 50%; /* Makes the image perfectly round */
+    border: 6px solid #FFC107; /* The bright Gold/Spice accent border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft, elegant shadow */
 }
 
 .about-photo img {
