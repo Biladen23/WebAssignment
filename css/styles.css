@@ -81,16 +81,18 @@ nav ul li a:hover {
 
 /* --- 3. General Content & Headings --- */
 .content-section {
-    padding: 60px 20px;
-    max-width: 1000px;
+    padding: 40px 20px;
+    max-width: 800px; /* Limits width for better reading on large screens */
     margin: 0 auto;
-    text-align: center;
+    text-align: center; /* Centers the H2 and photo by default */
 }
 
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #5C3D2E;
+.content-section h2 {
+    font-family: 'Merriweather', serif; 
+    color: #5C3D2E; /* Dark Brown Brand Color */
+    font-size: 2.2em; 
+    margin-bottom: 30px;
+    line-height: 1.2;
 }
 
 /* --- 4. Homepage (index.html) Styles --- */
