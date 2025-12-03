@@ -47,10 +47,17 @@ nav ul li a {
     padding: 10px 15px;
     display: block;
     transition: background-color 0.3s;
+    box-shadow: 0.3;
+    
+
 }
 
 nav ul li a:hover {
+    /* Existing background change */
     background-color: #7a5844; /* Lighter Brown */
+    
+    /* ADDED: Subtle black shadow on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
 }
 
 /* --- 3. General Content & Headings --- */
