@@ -343,6 +343,21 @@ h2 {
     color: #7a5844;
     white-space: nowrap;
 }
+.menu-category {
+    /* Existing styles: Ensure transition is present for smoothness */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s;
+}
+
+.menu-category:hover {
+    /* Lifts the card slightly */
+    transform: translateY(-2px); 
+    
+    /* Adds a slight black shadow on hover, as requested */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    
+    /* Optional: Slightly change background color for better visual feedback */
+    background-color: #fcfcfc;
+}
 
 /* --- 6. About Us Page Styles (about.html) --- */
 #about-page p {
