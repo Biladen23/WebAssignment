@@ -450,7 +450,14 @@ nav ul li a:hover {
     font-style: italic;
     margin: 0;
 }
-
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color:rgba(0,0,0.3);
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+}
 /* Enhanced Menu Item */
 .menu-item {
     display: flex;
