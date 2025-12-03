@@ -871,53 +871,80 @@ nav .active {
 
 /* --- 9. Footer (Used on ALL Pages) --- */
 /* FOOTER SECTION */
+/* --- 7. Footer Styles (for all pages) --- */
+
+/* 1. Base Footer Styling: Dark background and Gold text */
 footer {
-    background-color: #000;       /* Pure black background */
-    color: #fff;
-    padding: 20px 0;
+    background-color: #5C3D2E; /* Dark Brown to match the header */
+    color: white; /* Default text color is white */
+    padding: 30px 20px 10px 20px;
+    font-size: 0.95em;
     text-align: center;
-    margin-top: 40px;
+    border-top: 5px solid #FFC107; /* Gold accent line for separation */
 }
 
-/* Footer text */
-footer p {
-    margin: 8px 0;
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
-/* Social icons container */
-.footer-icons {
+/* 2. Main Contact Section Layout (Responsive Flexbox) */
+.footer-container {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line on small screens */
+    justify-content: space-around; /* Spreads items out nicely */
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto 20px auto; /* Margin at the bottom separates from copyright */
 }
 
-/* Social icons image styling */
-.footer-icons img {
-    width: 28px;      /* Small, clean size */
-    height: 28px;
-    object-fit: contain;
-    filter: brightness(0) invert(1);  /* Makes icons white on black background */
-    transition: transform 0.2s ease;
+/* 3. Style for Each Footer Item (Location, Phone, Email) */
+.footer-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 15px;
+    /* On desktop, items won't take up the full width, but they will on mobile */
+    min-width: 250px; 
+    justify-content: center; 
 }
 
-/* Hover effect */
-.footer-icons img:hover {
-    transform: scale(1.12);
+/* 4. Icon Styling (Make them small, aligned, and gold) */
+.footer-icon {
+    /* Targets the SVG or font icon */
+    width: 20px; /* **Small Icon Size** */
+    height: 20px;
+    fill: #FFC107; /* **Change icon color to Gold** */
+    margin-right: 10px;
 }
 
-/* RESPONSIVENESS */
-@media (max-width: 480px) {
-    footer p {
-        font-size: 0.8rem;
+/* 5. Footer Text */
+.footer-item p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* 6. Copyright and Student Info */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Light separator line */
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+/* 7. Special Mobile Adjustment (Stacks on very small screens) */
+@media (max-width: 600px) {
+    .footer-item {
+        /* Force items to take up full width for clear stacking on mobile */
+        width: 100%; 
+        justify-content: flex-start; /* Align all items to the left */
+        margin: 10px 0;
     }
-    .footer-icons img {
-        width: 24px;
-        height: 24px;
+    
+    .footer-container {
+        /* Align content to the left inside the footer container */
+        justify-content: flex-start;
     }
 }
+
 /* New layout wrapper: left contact info + right student info */
 .footer-container {
     max-width: 1200px;
