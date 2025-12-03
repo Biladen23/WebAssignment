@@ -450,14 +450,7 @@ nav ul li a:hover {
     font-style: italic;
     margin: 0;
 }
-footer {
-    margin-top: 40px;
-    padding: 20px;
-    background-color:rgba(0,0,0.3);
-    color: white;
-    text-align: center;
-    font-size: 0.9em;
-}
+
 /* Enhanced Menu Item */
 .menu-item {
     display: flex;
@@ -877,28 +870,54 @@ nav .active {
 }
 
 /* --- 9. Footer (Used on ALL Pages) --- */
+/* FOOTER SECTION */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #000;       /* Pure black background */
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    padding: 25px 0;
-    font-size: 0.9em;
+    margin-top: 40px;
 }
 
+/* Footer text */
 footer p {
-    margin: 5px 0;
+    margin: 8px 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
 }
 
-/* Footer contact layout */
-.footer-content {
-    display: block;
-    justify-content: flex-start; /* left-align the items when contained */
-    gap: 50px;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
+/* Social icons container */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
 }
 
+/* Social icons image styling */
+.footer-icons img {
+    width: 28px;      /* Small, clean size */
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);  /* Makes icons white on black background */
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect */
+.footer-icons img:hover {
+    transform: scale(1.12);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 480px) {
+    footer p {
+        font-size: 0.8rem;
+    }
+    .footer-icons img {
+        width: 24px;
+        height: 24px;
+    }
+}
 /* New layout wrapper: left contact info + right student info */
 .footer-container {
     max-width: 1200px;
