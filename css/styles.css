@@ -333,6 +333,67 @@ nav ul li a:hover {
     font-style: italic;
     letter-spacing: 0.5px;
 }
+.main-dishes-category {
+    border-left: 5px solid #D32F2F;
+    background: linear-gradient(to right, #FFF8F8, white);
+}
+
+.main-dishes-category h3 {
+    color: #D32F2F;
+    background-color: #FFEBEE;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* SIDE DISHES - Fresh green theme */
+.side-dishes-category {
+    border-left: 5px solid #388E3C;
+    background: linear-gradient(to right, #F8FFF8, white);
+}
+
+.side-dishes-category h3 {
+    color: #388E3C;
+    background-color: #E8F5E9;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* BEVERAGES - Cool brown theme */
+.beverages-category {
+    border-left: 5px solid #5D4037;
+    background: linear-gradient(to right, #FFFBF8, white);
+}
+
+.beverages-category h3 {
+    color: #5D4037;
+    background-color: #EFEBE9;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Category Icons */
+.category-icon {
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+
+/* Price color per category */
+.main-dishes-category .item-price {
+    color: #D32F2F;
+    background-color: #FFEBEE;
+}
+
+.side-dishes-category .item-price {
+    color: #388E3C;
+    background-color: #E8F5E9;
+}
+
+.beverages-category .item-price {
+    color: #5D4037;
+    background-color: #EFEBE9;
 
 /* Enhanced Menu Category */
 .menu-category {
