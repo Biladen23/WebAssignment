@@ -264,7 +264,16 @@ h2 {
     border-radius: inherit;
     filter: brightness(0.78); /* slightly darken so text remains legible */
 }
+.pick-item {
+    /* ... existing styles ... */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition */
+}
 
+.pick-item:hover {
+    /* Lifts the card and makes it slightly larger on hover */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* A more pronounced shadow */
+}
 /* Ensure the textual content sits above the image */
 .pick-item > * {
     position: relative;
