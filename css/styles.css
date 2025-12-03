@@ -538,7 +538,27 @@ nav ul li a:hover {
     color: #558B2F;
     border: 1px solid #DCEDC8;
 }
+spicy-tag, .fresh-tag, .hot-tag {
+    font-size: 0.7em;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+}
 
+.spicy-tag {
+    background-color: #FFCDD2;
+    color: #C62828;
+}
+
+.fresh-tag {
+    background-color: #C8E6C9;
+    color: #2E7D32;
+}
+
+.hot-tag {
+    background-color: #FFE0B2;
+    color: #EF6C00;
+}
 /* Menu Note */
 .menu-note {
     text-align: center;
