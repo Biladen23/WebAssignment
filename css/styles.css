@@ -344,18 +344,25 @@ h2 {
     white-space: nowrap;
 }
 .menu-category {
-    /* Existing styles: Ensure transition is present for smoothness */
+    /* Existing Styles */
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #EFEBE9;
+    border-radius: 6px;
+    background-color: white;
+    
+    /* ADDED: Set up for smooth transition */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s;
 }
 
 .menu-category:hover {
-    /* Lifts the card slightly */
-    transform: translateY(-2px); 
+    /* Lifts the card strongly, similar to the profile picture */
+    transform: translateY(-8px); 
     
-    /* Adds a slight black shadow on hover, as requested */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    /* Applies a deep black shadow, similar to the gallery/profile */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45); 
     
-    /* Optional: Slightly change background color for better visual feedback */
+    /* Optional: Slight color change for visual confirmation */
     background-color: #fcfcfc;
 }
 
