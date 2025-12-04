@@ -415,25 +415,38 @@ h2 {
 }
 
 
-/* 1. Set transitions for smooth movement and shadow changes */
-.about-photo, .about-photo img {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+/* Add transition to the container for smooth lift */
+.about-photo {
+    /* Set transition on the container */
+    transition: transform 0.3s ease-in-out;
 }
 
-/* 2. The Container Hover: Lifts the picture and adds the dark shadow */
+/* Add transition and circular border-radius to the image itself */
+.about-photo img {
+    /* Existing: Makes it circular */
+    border-radius: 50%;
+    
+    /* ADDED: Transition for smooth zoom and shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    
+    /* Ensure image starts with a subtle shadow */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Replicates original shadow */
+}
+
+/* Apply the hover effect (lift + shadow) */
 .about-photo:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4); /* Deep black shadow */
+    /* Lifts the whole card, including the circular image */
+    transform: translateY(-10px); 
 }
 
-/* 3. The Image Hover: Zooms and adds the circular border glow */
+/* Apply the shadow and zoom only to the circular image element on hover */
 .about-photo:hover img {
     transform: scale(1.05); /* Slight zoom in */
     
-    /* NEW: Adds a circular, glowing gold and brown ring around the image */
+    /* CORRECTED: The shadow is now applied to the circular element, respecting the border-radius: 50% */
     box-shadow: 
-        0 0 0 5px #ebc109, /* 5px solid gold ring */
-        0 0 0 10px rgba(91, 58, 41, 0.4); /* 10px softer brown halo */
+        0 8px 25px rgba(0, 0, 0, 0.5), /* Deep black shadow that follows the circle */
+        0 0 0 5px #ebc109; /* Optional: Gold ring border */
 }
 
 /* --- 7. Gallery Page Styles (gallery.html) --- */
