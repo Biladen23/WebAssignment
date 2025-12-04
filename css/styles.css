@@ -59,7 +59,7 @@ nav ul li a {
     display: block;
     
     /* ADDED: Include border-bottom in transition for smooth reveal */
-    transition: background-color 0.15s, border-bottom 0.3s, box-shadow 0.15s; 
+    transition: background-color 0.08s, border-bottom 0.08s, box-shadow 0.08s; 
     
     /* Set a transparent border so the link height doesn't jump on hover */
     border-bottom: 2px solid transparent; 
