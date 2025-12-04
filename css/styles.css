@@ -415,20 +415,25 @@ h2 {
 }
 
 
-/* 1. This makes the movement smooth */
+/* 1. Set transitions for smooth movement and shadow changes */
 .about-photo, .about-photo img {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* 2. This applies the lift and shadow to the container */
+/* 2. The Container Hover: Lifts the picture and adds the dark shadow */
 .about-photo:hover {
-    transform: translateY(-10px); /* Lifts the photo up */
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4); /* Strong, deep black shadow */
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4); /* Deep black shadow */
 }
 
-/* 3. This zooms the image inside slightly */
+/* 3. The Image Hover: Zooms and adds the circular border glow */
 .about-photo:hover img {
     transform: scale(1.05); /* Slight zoom in */
+    
+    /* NEW: Adds a circular, glowing gold and brown ring around the image */
+    box-shadow: 
+        0 0 0 5px #ebc109, /* 5px solid gold ring */
+        0 0 0 10px rgba(91, 58, 41, 0.4); /* 10px softer brown halo */
 }
 
 /* --- 7. Gallery Page Styles (gallery.html) --- */
