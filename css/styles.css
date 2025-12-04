@@ -46,17 +46,21 @@ nav ul li a {
     text-decoration: none;
     padding: 10px 15px;
     display: block;
-    transition: background-color 0.3s;
-    box-shadow: 0.3;
     
-
+    /* ADDED: Include border-bottom in transition for smooth reveal */
+    transition: background-color 0.3s, border-bottom 0.3s, box-shadow 0.3s; 
+    
+    /* Set a transparent border so the link height doesn't jump on hover */
+    border-bottom: 2px solid transparent; 
 }
 
 nav ul li a:hover {
-    /* Existing background change */
-    background-color: #7a5844; /* Lighter Brown */
+    background-color: #7a5844; /* Existing Lighter Brown background */
     
-    /* ADDED: Subtle black shadow on hover */
+    /* ADDED: Solid Gold Underline on Hover */
+    border-bottom: 2px solid #ebc109; /* Gold color from your H1/logo */
+    
+    /* ADDED: Subtle black shadow on hover (as previously requested) */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
 }
 
