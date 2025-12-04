@@ -40,6 +40,17 @@ nav ul {
     margin: 0;
     display: flex;
 }
+/* Style for the currently active link */
+nav ul li a.active-page {
+    /* Set the permanent background color for the active link */
+    background-color: #7a5844; 
+    
+    /* Set the permanent gold underline */
+    border-bottom: 2px solid #ebc109; 
+    
+    /* Apply a persistent shadow to indicate the active state */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
 
 nav ul li a {
     color: white;
